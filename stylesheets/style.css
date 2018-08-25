@@ -7,4 +7,31 @@ body
 	background:linear-gradient(to bottom, #020024, #090979, #00D4FF);
 	background-repeat:no-repeat;
 	background-size:100% 100%;
+	font-family:Raleway, Arial, sans-serif;
+	color:white;
+}
+
+p
+{
+	font-size:2vw;
+}
+
+@media only screen and (min-width: 638px)
+{
+	/*hi*/
+}
+
+@media only screen and (min-width: 875px)
+{
+	/*hi*/
+}
+
+@media only screen and (min-width: 1050px)
+{
+	/*hi*/
+}
+
+@media only screen and (min-width: 1450px)
+{
+	/*hi*/
 }
