@@ -1,10 +1,10 @@
 body
 {
 	background:#0744A0; /* For browsers that do not support gradients */
-	background:-webkit-linear-gradient(to bottom, #020024, #090979, #00D4FF);
-	background:-o-linear-gradient(to bottom, #020024, #090979, #00D4FF);
-	background:-moz-linear-gradient(to bottom, #020024, #090979, #00D4FF);
-	background:linear-gradient(to bottom, #020024, #090979, #00D4FF);
+	background:-webkit-linear-gradient(to bottom, #3a0140, #090979, #00D4FF);
+	background:-o-linear-gradient(to bottom, #3a0140, #090979, #00D4FF);
+	background:-moz-linear-gradient(to bottom, #3a0140, #090979, #00D4FF);
+	background:linear-gradient(to bottom, #3a0140, #090979, #00D4FF);
 	background-repeat:no-repeat;
 	background-size:100% 100%;
 	font-family:Raleway, Arial, sans-serif;
@@ -16,14 +16,35 @@ p
 	font-size:3vw;
 }
 
+h1
+{
+	font-size:5vw;
+}
+
+div
+{
+	text-align:center;
+}
+
+.topSpacer
+{
+	height:20vw;
+}
+
 @media only screen and (min-width: 638px)
 {
-	/*hi*/
+	.topSpacer
+	{
+		height:16vw;
+	}
 }
 
 @media only screen and (min-width: 875px)
 {
-	/*hi*/
+	.topSpacer
+	{
+		height:12vw;
+	}
 }
 
 @media only screen and (min-width: 1050px)
@@ -32,6 +53,11 @@ p
 	{
 		font-size:2vw;
 	}
+	
+	.topSpacer
+	{
+		height:8vw;
+	}
 }
 
 @media only screen and (min-width: 1450px)
@@ -39,5 +65,10 @@ p
 	p
 	{
 		font-size:2vw;
+	}
+	
+	.topSpacer
+	{
+		height:7vw;
 	}
 }

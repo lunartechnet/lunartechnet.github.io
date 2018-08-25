@@ -1,0 +1,28 @@
+#top
+{
+	margin:none;
+	padding:none;
+	background-image:url("../images/backgrounds/Lake-View-Moon-Background.png"), url("../images/div-backgrounds/70 Opacity.png");
+	background-size:cover;
+	overflow:hidden;
+}
+
+@media only screen and (min-width: 638px)
+{
+	/*hi*/
+}
+
+@media only screen and (min-width: 875px)
+{
+	/*hi*/
+}
+
+@media only screen and (min-width: 1050px)
+{
+	/*hi*/
+}
+
+@media only screen and (min-width: 1450px)
+{
+	/*hi*/
+}
