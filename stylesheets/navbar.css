@@ -20,7 +20,7 @@
 .navbarSpacer
 {
 	display:table-cell;
-	width:5%;
+	width:2%;
 }
 
 .navbarLargeSpacer
@@ -45,7 +45,7 @@
 .navbarOption
 {
 	display:table-cell;
-	width:10%;
+	width:14%;
 	text-align:center;
 	vertical-align:middle;
 	text-shadow:1px 1px 2px #000000, 0px 0px 2px #000000;
@@ -67,6 +67,11 @@
 .navbarActiveOption
 {
 	text-shadow:1px 1px 2px #00FF00, 0px 0px 2px #00FF00;
+}
+
+.navbarOptionSmall
+{
+	width:10%;
 }
 
 @media only screen and (min-width: 638px)
@@ -91,6 +96,21 @@
 	{
 		height: 4vw;
 	}
+	
+	.navbarOption
+	{
+		width:10%;
+	}
+	
+	.navbarOptionSmall
+	{
+		width:8%;
+	}
+	
+	.navbarSpacer
+	{
+		width:5%;
+	}
 }
 
 @media only screen and (min-width: 1450px)
@@ -98,5 +118,20 @@
 	#navbar, #navbarNoCollision, .navbarLogo
 	{
 		height: 3vw;
+	}
+	
+	.navbarOption
+	{
+		width:10%;
+	}
+	
+	.navbarOptionSmall
+	{
+		width:8%;
+	}
+	
+	.navbarSpacer
+	{
+		width:5%;
 	}
 }
