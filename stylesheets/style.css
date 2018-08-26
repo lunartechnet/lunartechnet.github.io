@@ -30,7 +30,9 @@ div
 
 section
 {
-	margin:5px 5px 5px 5px;
+	margin:2.5% 2.5% 2.5% 2.5%;
+	width:100vw;
+	height:100vh;
 }
 
 @media only screen and (min-width: 638px)
