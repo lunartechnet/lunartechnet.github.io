@@ -5,6 +5,29 @@
 	background-image:url("../images/backgrounds/Lake-View-Moon-Background.png"), url("../images/div-backgrounds/70 Opacity.png");
 	background-size:cover;
 	overflow:hidden;
+	height:100vh;
+}
+
+.topSpacer
+{
+	height:auto;
+}
+
+#titleContainer
+{
+	height:45%;
+}
+
+.downArrow
+{
+	width:100%;
+	height:15%;
+}
+
+.downArrow img
+{
+	height:100%;
+	width:auto;
 }
 
 @media only screen and (min-width: 638px)

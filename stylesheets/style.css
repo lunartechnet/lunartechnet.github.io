@@ -9,6 +9,7 @@ body
 	background-size:100% 100%;
 	font-family:Raleway, Arial, sans-serif;
 	color:white;
+	text-shadow:1px 1px 2px #000000, 0px 0px 2px #000000;
 }
 
 p
@@ -26,25 +27,14 @@ div
 	text-align:center;
 }
 
-.topSpacer
-{
-	height:20vw;
-}
-
 @media only screen and (min-width: 638px)
 {
-	.topSpacer
-	{
-		height:16vw;
-	}
+	/*hi*/
 }
 
 @media only screen and (min-width: 875px)
 {
-	.topSpacer
-	{
-		height:12vw;
-	}
+	/*hi*/
 }
 
 @media only screen and (min-width: 1050px)
@@ -53,11 +43,6 @@ div
 	{
 		font-size:2vw;
 	}
-	
-	.topSpacer
-	{
-		height:8vw;
-	}
 }
 
 @media only screen and (min-width: 1450px)
@@ -65,10 +50,5 @@ div
 	p
 	{
 		font-size:2vw;
-	}
-	
-	.topSpacer
-	{
-		height:7vw;
 	}
 }
