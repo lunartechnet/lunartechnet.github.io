@@ -24,6 +24,77 @@
  <script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.18/scrolls.min.js"></script>
  
  <script>
+	<!--Anti-horizontal-scrolling-->
+	var scrollEventHandler = function()
+	{
+		window.scroll(0, window.pageYOffset)
+	}
+
+	window.addEventListener("scroll", scrollEventHandler, false);
+ </script>
+ <script>
+	var changeNavbar = function()
+	{
+		var windowHeight = window.innerHeight;
+		var scrollHeight = window.scrollY;
+		var navbarOptions = document.getElementsByClassName("navbarOptionText");
+		if (windowHeight*0 <= scrollHeight && scrollHeight < windowHeight*1)
+		{
+			if (!navbarOptions[0].parentElement.classList.contains("navbarActiveOption"))
+			{
+				for (var i=0; i<navbarOptions.length; i++)
+				{
+					navbarOptions[i].parentElement.classList.remove("navbarActiveOption");
+				}
+				navbarOptions[0].parentElement.classList.add("navbarActiveOption");
+			}
+		}
+		else if (windowHeight*1 <= scrollHeight && scrollHeight < windowHeight*2)
+		{
+			if (!navbarOptions[1].parentElement.classList.contains("navbarActiveOption"))
+			{
+				for (var i=0; i<navbarOptions.length; i++)
+				{
+					navbarOptions[i].parentElement.classList.remove("navbarActiveOption");
+				}
+				navbarOptions[1].parentElement.classList.add("navbarActiveOption");
+			}
+		}
+		else if (windowHeight*2 <= scrollHeight && scrollHeight < windowHeight*3)
+		{
+			if (!navbarOptions[2].parentElement.classList.contains("navbarActiveOption"))
+			{
+				for (var i=0; i<navbarOptions.length; i++)
+				{
+					navbarOptions[i].parentElement.classList.remove("navbarActiveOption");
+				}
+				navbarOptions[2].parentElement.classList.add("navbarActiveOption");
+			}
+		}
+		else if ((windowHeight*3 <= scrollHeight && scrollHeight < windowHeight*5) || (windowHeight*6 <= scrollHeight && scrollHeight < windowHeight*7))
+		{
+			if (navbarOptions[0].parentElement.classList.contains("navbarActiveOption") || navbarOptions[1].parentElement.classList.contains("navbarActiveOption") || navbarOptions[2].parentElement.classList.contains("navbarActiveOption") || navbarOptions[3].parentElement.classList.contains("navbarActiveOption"))
+			{
+				for (var i=0; i<navbarOptions.length; i++)
+				{
+					navbarOptions[i].parentElement.classList.remove("navbarActiveOption");
+				}
+			}
+		}
+		else if (windowHeight*5 <= scrollHeight && scrollHeight < windowHeight*6)
+		{
+			if (!navbarOptions[3].parentElement.classList.contains("navbarActiveOption"))
+			{
+				for (var i=0; i<navbarOptions.length; i++)
+				{
+					navbarOptions[i].parentElement.classList.remove("navbarActiveOption");
+				}
+				navbarOptions[3].parentElement.classList.add("navbarActiveOption");
+			}
+		}
+	}
+	
+	window.addEventListener("scroll", changeNavbar, false);
  </script>
 
  </head>
@@ -32,10 +103,10 @@
 		<div class="navbarSpacer">&nbsp;</div>
 		<div class="navbarLogo"><img class="navbarLogo" src="images/logos/lunartech_full.png" alt="Lunartech LLC Logo"/></div>
 		<div class="navbarLargeSpacer">&nbsp;</div>
-		<div class="navbarOption navbarOptionSmall navbarActiveOption" onclick="scrolls('.top');"><p class="navbarOptionText">Home</p><a href="#top"></a></div>
-		<div class="navbarOption navbarOptionSmall " onclick="scrolls('.about');"><p class="navbarOptionText">About</p><a href="#about"></a></div>
-		<div class="navbarOption " onclick="scrolls('.software');"><p class="navbarOptionText">Software</p><a href="#software"></a></div>
-		<div class="navbarOption " onclick="scrolls('.downloads');"><p class="navbarOptionText">Downloads</p><a href="#downloads"></a></div>
+		<div class="navbarOption navbarOptionSmall navbarActiveOption" onclick="scrolls('.top');"><p class="navbarOptionText">Home</p></div>
+		<div class="navbarOption navbarOptionSmall " onclick="scrolls('.about');"><p class="navbarOptionText">About</p></div>
+		<div class="navbarOption " onclick="scrolls('.software');"><p class="navbarOptionText">Software</p></div>
+		<div class="navbarOption " onclick="scrolls('.downloads');"><p class="navbarOptionText">Downloads</p></div>
 		<div class="navbarSpacer" style="width:2%">&nbsp;</div>
 	</div>
 	<section class="top">
@@ -80,6 +151,10 @@
 	<section class="downloads">
 		<div class="navbarNoCollision">&nbsp;</div>
 		<h2>Downloads</h2>
+	</section>
+	<section>
+		<div class="navbarNoCollision">&nbsp;</div>
+		<h2>Contact Us</h2>
 	</section>
  </body>
  </html>
