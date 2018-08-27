@@ -1,4 +1,4 @@
-#top
+.top
 {
 	margin:0px 0px 0px 0px;
 	padding:none;
@@ -9,7 +9,7 @@
 	height:100vh;
 }
 
-#topContent
+.sectionContent
 {
 	display:table-cell;
 	vertical-align:middle;
@@ -17,12 +17,12 @@
 	height:90vh;
 }
 
-.topSpacer
+.contentSpacer
 {
 	height:5%;
 }
 
-#titleContainer
+.contentContainer
 {
 	height:auto;
 }

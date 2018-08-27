@@ -11,7 +11,7 @@
 	opacity:.8;
 }
 
-#navbarNoCollision
+.navbarNoCollision
 {
 	width:100%;
 	height: 10vw;
@@ -76,7 +76,7 @@
 
 @media only screen and (min-width: 638px)
 {
-	#navbar, #navbarNoCollision, .navbarLogo
+	#navbar, .navbarNoCollision, .navbarLogo
 	{
 		height: 8vw;
 	}
@@ -84,7 +84,7 @@
 
 @media only screen and (min-width: 875px)
 {
-	#navbar, #navbarNoCollision, .navbarLogo
+	#navbar, .navbarNoCollision, .navbarLogo
 	{
 		height: 6vw;
 	}
@@ -92,7 +92,7 @@
 
 @media only screen and (min-width: 1050px)
 {
-	#navbar, #navbarNoCollision, .navbarLogo
+	#navbar, .navbarNoCollision, .navbarLogo
 	{
 		height: 4vw;
 	}
@@ -115,7 +115,7 @@
 
 @media only screen and (min-width: 1450px)
 {
-	#navbar, #navbarNoCollision, .navbarLogo
+	#navbar, .navbarNoCollision, .navbarLogo
 	{
 		height: 3.5vw;
 	}

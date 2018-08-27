@@ -19,6 +19,12 @@
  <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
  <link type="text/css" rel="stylesheet" href="stylesheets/navbar.css"/>
  <link type="text/css" rel="stylesheet" href="stylesheets/homepage.css"/>
+ 
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+ <script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.18/scrolls.min.js"></script>
+ 
+ <script>
+ </script>
 
  </head>
  <body>
@@ -26,44 +32,54 @@
 		<div class="navbarSpacer">&nbsp;</div>
 		<div class="navbarLogo"><img class="navbarLogo" src="images/logos/lunartech_full.png" alt="Lunartech LLC Logo"/></div>
 		<div class="navbarLargeSpacer">&nbsp;</div>
-		<div class="navbarOption navbarOptionSmall navbarActiveOption"><p class="navbarOptionText">Home</p></div>
-		<div class="navbarOption navbarOptionSmall "><p class="navbarOptionText">About</p></div>
-		<div class="navbarOption "><p class="navbarOptionText">Software</p></div>
-		<div class="navbarOption "><p class="navbarOptionText">Downloads</p></div>
+		<div class="navbarOption navbarOptionSmall navbarActiveOption" onclick="scrolls('.top');"><p class="navbarOptionText">Home</p><a href="#top"></a></div>
+		<div class="navbarOption navbarOptionSmall " onclick="scrolls('.about');"><p class="navbarOptionText">About</p><a href="#about"></a></div>
+		<div class="navbarOption " onclick="scrolls('.software');"><p class="navbarOptionText">Software</p><a href="#software"></a></div>
+		<div class="navbarOption " onclick="scrolls('.downloads');"><p class="navbarOptionText">Downloads</p><a href="#downloads"></a></div>
 		<div class="navbarSpacer" style="width:2%">&nbsp;</div>
 	</div>
-	<section id="top">
-		<div id="topContent">
-			<div id="navbarNoCollision">&nbsp;</div>
-			<div class="topSpacer">&nbsp;</div>
-			<div id="titleContainer">
+	<section class="top">
+		<div class="sectionContent">
+			<div class="navbarNoCollision">&nbsp;</div>
+			<div class="contentSpacer">&nbsp;</div>
+			<div class="contentContainer">
 				<h1>Lunar Technology, LLC</h1>
 				<p style="font-size:3vw">The fine art of technology,<br/>refined and perfected</p>
 			</div>
-			<div class="topSpacer">&nbsp;</div>
+			<div class="contentSpacer">&nbsp;</div>
 		</div>
 		<div class="downArrow"><img src="images/icons/arrow-down@2x.png" alt="Down Arrow"/></div>
 	</section>
-	<section id="about">
-		<h1 style="color:white">testing</h1>
+	<section class="about">
+		<div class="sectionContent">
+			<div class="navbarNoCollision">&nbsp;</div>
+			<div class="contentSpacer">&nbsp;</div>
+			<div class="contentContainer" style="text-align:left; width:90%;">
+				<h2>Our Mission</h2>
+				<p>
+					At Lunartech, we aim to make outdated operating systems easier to use
+					for industry in the modern day. This is mainly achieved through the use
+					of small, easy-to-use commandline programs meant to integrate seamlessly
+					into any operating system.
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="software">
+		<div class="navbarNoCollision">&nbsp;</div>
+		<h2>Software</h2>
 	</section>
 	<section>
-		<h1 style="color:white">testing 2</h1>
+		<div class="navbarNoCollision">&nbsp;</div>
+		<h2>Windows Software</h2>
 	</section>
 	<section>
-		<h1 style="color:white">testing 3</h1>
+		<div class="navbarNoCollision">&nbsp;</div>
+		<h2>Linux Software</h2>
 	</section>
-	<section>
-		<h1 style="color:white">testing 4</h1>
-	</section>
-	<section>
-		<h1 style="color:white">testing 5</h1>
-	</section>
-	<section>
-		<h1 style="color:white">testing 6</h1>
-	</section>
-	<section>
-		<h1 style="color:white">testing 7</h1>
+	<section class="downloads">
+		<div class="navbarNoCollision">&nbsp;</div>
+		<h2>Downloads</h2>
 	</section>
  </body>
  </html>
