@@ -24,6 +24,28 @@
  <script src="https://cdn.jsdelivr.net/npm/scrolls.js@1.0.18/scrolls.min.js"></script>
  
  <script>
+	function startScroll()
+	{
+		if (document.getElementById("navbar").classList.contains("scrolled"))
+		{
+			document.getElementById("navbar").classList.add("auto-scrolling");
+			document.getElementById("navbar").classList.add("auto-scrolling-up");
+			setTimeout(endScroll,1200);
+		}
+		else
+		{
+			document.getElementById("navbar").classList.add("auto-scrolling");
+			setTimeout(endScroll,1200);
+			document.getElementById("navbar").classList.remove("scrolled");
+		}
+	}
+	function endScroll()
+	{
+		document.getElementById("navbar").classList.remove("auto-scrolling");
+		document.getElementById("navbar").classList.remove("auto-scrolling-up");
+	}
+ </script>
+ <script>
 	//Anti-horizontal-scrolling
 	var scrollEventHandler = function()
 	{
@@ -34,6 +56,7 @@
  </script>
  <script>
 	// Dynamic navbar on page scroll
+	var prevScrollHeight = window.scrollY;
 	var changeNavbar = function()
 	{
 		var windowHeight = window.innerHeight;
@@ -93,6 +116,32 @@
 				navbarOptions[3].parentElement.classList.add("navbarActiveOption");
 			}
 		}
+		
+		// Check to see if the user is scrolling up
+		var scrollingUp = false;
+		if (prevScrollHeight > scrollHeight)
+		{
+			scrollingUp = true;
+		}
+		
+		// Make the "back to top" link visible if user has scrolled
+		var nav = document.getElementById("navbar");
+		if (((scrollHeight == 0) || (scrollingUp == true) || (nav.classList.contains("auto-scrolling"))) && (!nav.classList.contains("auto-scrolling-up")))
+		{
+			if (nav.classList.contains("scrolled"))
+			{
+				nav.classList.remove("scrolled");
+			}
+		}
+		else
+		{
+			if (!nav.classList.contains("scrolled"))
+			{
+				nav.classList.add("scrolled");
+			}
+		}
+		
+		prevScrollHeight = scrollHeight;
 	}
 	
 	window.addEventListener("scroll", changeNavbar, false);
@@ -104,12 +153,13 @@
 		<div class="navbarSpacer">&nbsp;</div>
 		<div class="navbarLogo"><img class="navbarLogo" src="images/logos/lunartech_full.png" alt="Lunartech LLC Logo"/></div>
 		<div class="navbarLargeSpacer">&nbsp;</div>
-		<div class="navbarOption navbarOptionSmall navbarActiveOption" onclick="scrolls('.top');"><p class="navbarOptionText">Home</p></div>
-		<div class="navbarOption navbarOptionSmall " onclick="scrolls('.about');"><p class="navbarOptionText">About</p></div>
-		<div class="navbarOption " onclick="scrolls('.software');"><p class="navbarOptionText">Software</p></div>
-		<div class="navbarOption " onclick="scrolls('.downloads');"><p class="navbarOptionText">Downloads</p></div>
+		<div class="navbarOption navbarOptionSmall navbarActiveOption" onclick="startScroll();scrolls('.top');"><p class="navbarOptionText">Home</p></div>
+		<div class="navbarOption navbarOptionSmall " onclick="startScroll();scrolls('.about');"><p class="navbarOptionText">About</p></div>
+		<div class="navbarOption " onclick="startScroll();scrolls('.software');"><p class="navbarOptionText">Software</p></div>
+		<div class="navbarOption " onclick="startScroll();scrolls('.downloads');"><p class="navbarOptionText">Downloads</p></div>
 		<div class="navbarSpacer" style="width:2%">&nbsp;</div>
 	</div>
+	<!--<div id="backToTop" onclick="scrolls('.top');"><img class="upArrow" src="images/icons/arrow-up@2x.png" alt="Up Arrow"/></div>-->
 	<section class="top">
 		<div class="sectionContent">
 			<div class="navbarNoCollision">&nbsp;</div>
@@ -120,7 +170,7 @@
 			</div>
 			<div class="contentSpacer">&nbsp;</div>
 		</div>
-		<div class="downArrow"><img src="images/icons/arrow-down@2x.png" alt="Down Arrow"/></div>
+		<div class="downArrow"><img src="images/icons/arrow-down@2x.png" alt="Down Arrow" onclick="startScroll();scrolls('.about');"/></div>
 	</section>
 	<section class="about">
 		<div class="sectionContent">

@@ -39,6 +39,36 @@
 	width:auto;
 }
 
+.downArrow img:hover
+{
+	cursor:pointer;
+}
+
+/*#backToTop
+{
+	position:fixed;
+	bottom:0%;
+	right:5%;
+	width:20%;
+	height:20%;
+}
+
+.upArrow
+{
+	width:100%;
+	height:auto;
+}
+
+.upArrow:hover
+{
+	cursor:pointer;
+}*/
+
+.hidden
+{
+	display:none;
+}
+
 @media only screen and (min-width: 638px)
 {
 	/*hi*/
