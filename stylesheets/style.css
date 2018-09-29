@@ -36,6 +36,18 @@ a
 	font-size:3vw;
 }
 
+a:link, a:visited
+{
+	color:#FF0000;
+	opacity:.75;
+}
+
+a:hover
+{
+	color:#FF00FF;
+	opacity:1;
+}
+
 div
 {
 	text-align:center;
